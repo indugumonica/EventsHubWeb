@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using ProductCatalogAPI.Data;
 using ProductCatalogAPI.Domain;
+using ProductCatalogAPI.ViewModels;
 
 namespace ProductCatalogAPI.Controllers
 {
@@ -58,7 +59,8 @@ namespace ProductCatalogAPI.Controllers
                 .OrderBy(c => c.Name).Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
 
             itemsOnPage = ChangeUrlPlaceHolder(itemsOnPage);
-            return Ok(itemsOnPage);
+            var model = new PaginatedItemsViewModel<CatalogEventItem>(pageIndex, pageSize, totalItems, itemsOnPage);
+            return Ok(model);
         }
 
         [HttpGet]
@@ -74,7 +76,61 @@ namespace ProductCatalogAPI.Controllers
                 .OrderBy(c => c.Name).Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
 
             itemsOnPage = ChangeUrlPlaceHolder(itemsOnPage);
-            return Ok(itemsOnPage);
+            var model = new PaginatedItemsViewModel<CatalogEventItem>(pageIndex, pageSize, totalItems, itemsOnPage);
+            return Ok(model);
+        }
+
+        [HttpGet]
+        [Route("[action]/type/{catalogTypeId}/Category/{catalogCategoryId}")]
+        public async Task<IActionResult> Items(
+            int? catalogTypeId,
+            int? catalogCategoryId,
+            [FromQuery] int pageSize = 6,
+            [FromQuery] int pageIndex = 0
+            )
+        {
+            var root = (IQueryable<CatalogEventItem>)_catalogContext.CatalogEventItems;
+            if (catalogTypeId.HasValue)
+            {
+                root = root.Where(c => c.CatalogTypeId == catalogTypeId);
+            }
+
+            if (catalogCategoryId.HasValue)
+            {
+                root = root.Where(c => c.CatalogCategoryId == catalogCategoryId);
+            }
+            var totalItems = await root.LongCountAsync();
+
+            var itemsOnPage = await root.OrderBy(c => c.Name).Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
+
+            itemsOnPage = ChangeUrlPlaceHolder(itemsOnPage);
+            var model = new PaginatedItemsViewModel<CatalogEventItem>(pageIndex, pageSize, totalItems, itemsOnPage);
+            return Ok(model);
+        }
+
+
+        [HttpPost]
+        [Route("items")]
+
+        public async Task<IActionResult> CreateProduct(
+            [FromBody] CatalogEventItem product)
+        {
+            var item = new CatalogEventItem
+            {
+                CatalogCategoryId = product.CatalogCategoryId,
+                CatalogTypeId = product.CatalogTypeId,
+                Description = product.Description,
+                Name = product.Name,
+                PictureUrl = product.PictureUrl,
+                Schedule = product.Schedule,
+                Price = product.Price
+            };
+
+            _catalogContext.CatalogEventItems.Add(item);
+            await _catalogContext.SaveChangesAsync();
+            //GetItembyID
+            return CreatedAtAction(nameof(GetItemById), new { id = item.Id });
+
         }
 
         [HttpGet]
