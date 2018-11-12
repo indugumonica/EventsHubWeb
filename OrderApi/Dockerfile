@@ -5,7 +5,7 @@ EXPOSE 44320
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["OrderApi/OrderApi.csproj", "OrderApi/"]
+COPY . OrderApi
 RUN dotnet restore "OrderApi/OrderApi.csproj"
 COPY . .
 WORKDIR "/src/OrderApi"

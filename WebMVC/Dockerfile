@@ -5,10 +5,10 @@ EXPOSE 44352
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["WebMVC/WebMVC.csproj", "WebMVC/"]
-RUN dotnet restore "WebMVC/WebMVC.csproj"
+COPY . WebMVC
+RUN dotnet restore WebMVC/WebMVC.csproj
 COPY . .
-WORKDIR "/src/WebMVC"
+WORKDIR /src/WebMVC
 RUN dotnet build "WebMVC.csproj" -c Release -o /app
 
 FROM build AS publish

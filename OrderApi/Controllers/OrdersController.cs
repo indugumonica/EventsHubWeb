@@ -17,7 +17,6 @@ namespace EventHub.Services.OrderApi.Controllers
 {
     [Route("api/v1/[controller]")]
     [Authorize]
-     
     public class OrdersController : Controller
     {
 

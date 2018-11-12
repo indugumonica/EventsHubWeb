@@ -79,6 +79,7 @@ namespace CartApi
 
                 return ConnectionMultiplexer.Connect(configuration);
             });
+
             services.AddSwaggerGen(options =>
             {
                 options.DescribeAllEnumsAsStrings();

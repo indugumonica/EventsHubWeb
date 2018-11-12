@@ -2,9 +2,14 @@ C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.runtimeconfig.json
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.runtimeconfig.dev.json
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.dll
+C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.pdb
+C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.Views.dll
+C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.Views.pdb
+C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.csprojAssemblyReference.cache
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.csproj.CoreCompileInputs.cache
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.RazorAssemblyInfo.cache
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.RazorAssemblyInfo.cs
+C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.AssemblyInfoInputs.cache
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.AssemblyInfo.cs
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.TagHelpers.input.cache
@@ -22,12 +27,7 @@ C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.RazorTargetAssemblyInfo.cache
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.RazorTargetAssemblyInfo.cs
-C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.pdb
-C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.Views.dll
-C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\bin\Debug\netcoreapp2.1\OrderApi.Views.pdb
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.Views.pdb
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.dll
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.pdb
 C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.csproj.CopyComplete
-C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\OrderApi.csprojAssemblyReference.cache
-C:\Users\Monica\Desktop\Kal\EventsHub\EventsHub\OrderApi\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

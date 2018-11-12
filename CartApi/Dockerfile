@@ -5,7 +5,7 @@ EXPOSE 44312
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["CartApi/CartApi.csproj", "CartApi/"]
+COPY . CartApi
 RUN dotnet restore "CartApi/CartApi.csproj"
 COPY . .
 WORKDIR "/src/CartApi"

@@ -10,7 +10,6 @@ using System.Net;
 namespace EventHub.Services.CartApi.Controllers
 {
     [Route("api/v1/[controller]")]
-
     public class CartController : Controller
     {
         private ICartRepository _repository;
@@ -20,6 +19,7 @@ namespace EventHub.Services.CartApi.Controllers
             _repository = repository;
             _logger = factory.CreateLogger<CartController>();
         }
+
         // GET api/values/5
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(Cart), (int)HttpStatusCode.OK)]

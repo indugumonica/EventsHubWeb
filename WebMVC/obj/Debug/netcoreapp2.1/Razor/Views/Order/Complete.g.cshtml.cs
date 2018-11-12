@@ -74,7 +74,7 @@ using WebMVC.Models;
             WriteLiteral("</p>\n<p>\n    How about shopping for some more goods in our\n    ");
             EndContext();
             BeginContext(196, 56, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7e3630f9e9ab43999af44cf18d2a0ecc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ddc8a0ca62874cc5bed7be2b914d55b8", async() => {
                 BeginContext(243, 5, true);
                 WriteLiteral("Store");
                 EndContext();

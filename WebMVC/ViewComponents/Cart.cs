@@ -11,15 +11,13 @@ using System.Threading.Tasks;
 
 namespace WebMvc.ViewComponents
 {
-    public class Cart:ViewComponent
+    public class Cart : ViewComponent
     {
         private readonly ICartService _cartSvc;
 
         public Cart(ICartService cartSvc) => _cartSvc = cartSvc;
         public async Task<IViewComponentResult> InvokeAsync(ApplicationUser user) 
         {
-
-            
             var vm = new CartComponentViewModel();
             try
             {
