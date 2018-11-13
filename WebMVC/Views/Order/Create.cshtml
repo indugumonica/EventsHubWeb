@@ -123,7 +123,7 @@
 
         jQuery(function ($) {
 
-             var stripe = Stripe('@ViewBag.StripePublishableKey');
+            var stripe = Stripe('@ViewBag.StripePublishableKey');
         
             var elements = stripe.elements();
             var card = elements.create('card', {

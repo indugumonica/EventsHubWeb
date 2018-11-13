@@ -32,6 +32,8 @@ namespace WebMVC
             services.AddMvc();
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services.Configure<AppSettings>(Configuration);
+            services.Configure<PaymentSettings>(Configuration);
+
             services.AddSingleton<IHttpClient, CustomHttpClient>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<ICatalogService, CatalogService>();

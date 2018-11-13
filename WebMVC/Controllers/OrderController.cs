@@ -57,7 +57,6 @@ namespace WebMvc.Controllers
                 order.BuyerId = user.Id;
 
                 var chargeOptions = new StripeChargeCreateOptions()
-
                 {
                     //required
                     Amount = (int)(order.OrderTotal * 100),
@@ -67,13 +66,12 @@ namespace WebMvc.Controllers
                     Description = string.Format("Order Payment {0}", order.UserName),
                     ReceiptEmail = order.UserName,
 
+
                 };
 
                 var chargeService = new StripeChargeService();
-
                 chargeService.ApiKey = paymentSettings.StripePrivateKey;
-
-
+                
                 StripeCharge stripeCharge = null;
                 try
                 {
